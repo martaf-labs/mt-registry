@@ -1,0 +1,64 @@
+{
+    "packages": {
+        "martaf-labs/mt-foundation": [
+            {
+                "name": "martaf-labs/mt-foundation",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-foundation.git",
+                    "reference": "b9dba3189fc95a8649b4a584e327e2b4f94fe637"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-foundation/martaf-labs-mt-foundation-b9dba3189fc95a8649b4a584e327e2b4f94fe637-zip-fb3446.zip",
+                    "reference": "b9dba3189fc95a8649b4a584e327e2b4f94fe637",
+                    "shasum": "b28cbcc9624460576bf08bf70e96445b4c4a2f09"
+                },
+                "require": {
+                    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+                    "intervention/image": "^3.0",
+                    "php": "^8.1",
+                    "spatie/image-optimizer": "^1.7",
+                    "spatie/laravel-activitylog": "^4.10",
+                    "spatie/laravel-permission": "^6.21",
+                    "spatie/laravel-translatable": "^6.11"
+                },
+                "time": "2026-05-14T03:26:11+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtFoundation\\MtFoundationServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtFoundation\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Ensemble de vues Blade partagées pour les projets Laravel : layouts, composants, partials, structures de base et optimisation d'images.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-foundation/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-foundation/issues"
+                }
+            }
+        ]
+    }
+}

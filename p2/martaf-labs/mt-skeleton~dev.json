@@ -1,0 +1,90 @@
+{
+    "packages": {
+        "martaf-labs/mt-skeleton": [
+            {
+                "name": "martaf-labs/mt-skeleton",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-skeleton.git",
+                    "reference": "4b2cc6f255672ba76c066a8cbb1062c133771cbc"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-4b2cc6f255672ba76c066a8cbb1062c133771cbc-zip-e349e5.zip",
+                    "reference": "4b2cc6f255672ba76c066a8cbb1062c133771cbc",
+                    "shasum": "f7fb8a6996326a2da6e73bc72015c94651721c12"
+                },
+                "require": {
+                    "laravel/framework": "^12.0",
+                    "martaf-labs/mt-foundation": "dev-main",
+                    "php": "^8.2"
+                },
+                "require-dev": {
+                    "laravel/pint": "^1.0",
+                    "pestphp/pest": "^3.0",
+                    "pestphp/pest-plugin-laravel": "^3.0"
+                },
+                "time": "2026-05-14T02:57:55+00:00",
+                "default-branch": true,
+                "type": "project",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "MtSkeleton\\MtSkeletonServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "App\\": "app/",
+                        "MtSkeleton\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "post-root-package-install": [
+                        "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+                    ],
+                    "post-create-project-cmd": [
+                        "@php artisan key:generate --ansi",
+                        "@php artisan mt:install"
+                    ],
+                    "test": [
+                        "pest"
+                    ],
+                    "lint": [
+                        "pint"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Skeleton officiel de l'écosystème martaf-labs. Permet de créer rapidement une application Laravel avec les modules mt-* souhaités.",
+                "keywords": [
+                    "ecosystem",
+                    "laravel",
+                    "martaf",
+                    "skeleton",
+                    "starter"
+                ],
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-skeleton/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-skeleton/issues"
+                }
+            }
+        ]
+    }
+}

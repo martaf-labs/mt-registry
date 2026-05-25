@@ -1,0 +1,71 @@
+{
+    "packages": {
+        "mt/mt-views": [
+            {
+                "name": "mt/mt-views",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-views.git",
+                    "reference": "3c2c38ee33ba32748ce809afc1bf6dc190994969"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/mt/mt-views/mt-mt-views-3c2c38ee33ba32748ce809afc1bf6dc190994969-zip-fcf6ea.zip",
+                    "reference": "3c2c38ee33ba32748ce809afc1bf6dc190994969",
+                    "shasum": "9cd0823a216fd084f43b595290c2dbd488980b35"
+                },
+                "require": {
+                    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+                    "illuminate/view": "^10.0 || ^11.0 || ^12.0",
+                    "intervention/image": "^3.0",
+                    "php": "^8.1",
+                    "spatie/image-optimizer": "^1.7",
+                    "spatie/laravel-activitylog": "^4.10",
+                    "spatie/laravel-permission": "^6.21",
+                    "spatie/laravel-translatable": "^6.11",
+                    "tinymce/tinymce": "*"
+                },
+                "time": "2026-04-30T03:53:29+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtViews\\MtViewsServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtViews\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "scripts": {
+                    "icons:generate": [
+                        "php ./scripts/generate-icons-css.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Ensemble de vues Blade partagées pour les projets Laravel : layouts, composants, partials, structures de base et optimisation d'images.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-views/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-views/issues"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "packages": {
+        "martaf-labs/mt-blog": [
+            {
+                "name": "martaf-labs/mt-blog",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-blog.git",
+                    "reference": "d9981f01ee893415d4e74a3f90a166f113aab039"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-blog/martaf-labs-mt-blog-d9981f01ee893415d4e74a3f90a166f113aab039-zip-5c95f9.zip",
+                    "reference": "d9981f01ee893415d4e74a3f90a166f113aab039",
+                    "shasum": "2a5fa0e08724dd3c8607cd35c548646a17f733dd"
+                },
+                "require": {
+                    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+                    "illuminate/view": "^10.0 || ^11.0 || ^12.0",
+                    "php": "^8.1"
+                },
+                "time": "2026-05-14T03:40:27+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\Blog\\MtBlogServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\Blog\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Package PHP centralisant la logique métier et les éléments réutilisables (modèles, traits, services, helpers, etc.) des projets de type blog afin de garantir une base de code commune et cohérente.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-blog/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-blog/issues"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "packages": [],
+    "includes": {
+        "include/all$041e66c568cf9297d1d5d6214668fb3761868f2d.json": {
+            "sha1": "041e66c568cf9297d1d5d6214668fb3761868f2d"
+        }
+    },
+    "metadata-url": "/mt-registry/p2/%package%.json",
+    "available-packages": [
+        "martaf-labs/mt-blog",
+        "martaf-labs/mt-foundation",
+        "martaf-labs/mt-skeleton",
+        "mt/mt-views"
+    ]
+}
