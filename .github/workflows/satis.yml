@@ -26,6 +26,10 @@ on:
 permissions:
   contents: write
 
+# Force Node.js 24 pour toutes les actions du workflow (évite les problèmes de compatibilité avec les actions JavaScript)
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     name: Build mt-registry
@@ -54,7 +58,6 @@ jobs:
             composer/satis build /build/satis.json /build/public --skip-errors
 
       # 4. Déployer sur GitHub Pages
-      #    → force_orphan : crée la branche gh-pages proprement si elle n'existe pas
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
