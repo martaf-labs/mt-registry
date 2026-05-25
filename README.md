@@ -82,7 +82,7 @@ Cochez la permission **`repo`** (accès en lecture aux repos privés), puis copi
 ### Étape 2 — Enregistrer le token dans Composer
 
 ```bash
-composer config --global github-oauth.github.com VOTRE_TOKEN_ICI
+composer config --global github-oauth.github.com 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
 ```
 
 Cela enregistre le token dans `~/.composer/auth.json`.
