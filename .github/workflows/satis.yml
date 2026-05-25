@@ -5,25 +5,17 @@
 # Se déclenche :
 #   - Manuellement (workflow_dispatch)
 #   - Via webhook depuis n'importe quel package mt-* (repository_dispatch)
-#     → Chaque package envoie un event "satis-update" après un push sur main
 #   - À chaque modification de satis.json sur main
-#
-# Résultat :
-#   - Génère les fichiers du registry dans public/
-#   - Déploie sur GitHub Pages (https://martaf-labs.github.io/mt-registry)
 
 name: Build & Deploy Registry
 
 on:
-  # Déclenchement manuel depuis l'onglet Actions sur GitHub
   workflow_dispatch:
 
-  # Déclenchement automatique via webhook depuis les packages mt-*
   repository_dispatch:
     types:
       - satis-update
 
-  # Déclenchement automatique à chaque modification de satis.json
   push:
     branches:
       - main
@@ -40,22 +32,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Construire le registry via l'image Docker officielle de Satis
-      #    → Pas de problème de version PHP ou de stabilité Composer
-      #    → SATIS_GITHUB_TOKEN : token avec accès "repo" aux packages privés
+      # 2. Corriger les permissions Git pour Docker
+      #    → Docker tourne en root, ce qui crée un conflit de propriété
+      #    → On déclare le dossier comme safe avant le build
+      - name: Fix Git ownership for Docker
+        run: |
+          git config --global --add safe.directory /build
+          git config --global --add safe.directory $(pwd)
+
+      # 3. Construire le registry via l'image Docker officielle de Satis
+      #    → --user : fait tourner Docker avec le même utilisateur que le runner
+      #    → Évite les conflits de permissions entre Docker et GitHub Actions
       - name: Build Registry
         run: |
           docker run --rm \
+            --user $(id -u):$(id -g) \
             -e COMPOSER_AUTH='{"github-oauth":{"github.com":"${{ secrets.SATIS_GITHUB_TOKEN }}"}}' \
+            -e COMPOSER_HOME=/tmp/composer \
             -v $(pwd):/build \
             composer/satis build /build/satis.json /build/public
 
-      # 3. Déployer sur GitHub Pages
+      # 4. Déployer sur GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          # Conserve les archives zip entre les builds
           keep_files: true
           commit_message: "chore: rebuild mt-registry [${{ github.event_name }}]"
