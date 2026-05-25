@@ -1,0 +1,54 @@
+{
+    "$schema": "https://raw.githubusercontent.com/composer/satis/main/res/satis-schema.json",
+
+    "name": "martaf-labs/mt-registry",
+    "description": "Registry Composer privé de l'écosystème martaf-labs",
+    "homepage": "https://martaf-labs.github.io/mt-registry",
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/martaf-labs/mt-skeleton"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/martaf-labs/mt-foundation"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/martaf-labs/mt-views"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/martaf-labs/mt-school"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/martaf-labs/mt-blog"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/martaf-labs/mt-icons"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/martaf-labs/mt-docs"
+        }
+    ],
+
+    "require-all": true,
+
+    "archive": {
+        "directory": "dist",
+        "format": "zip",
+        "skip-dev": false
+    },
+
+    "require-dependencies": true,
+    "require-dev-dependencies": false,
+
+    "output-html": true,
+    "output-dir": "public/",
+
+    "twig-template": null
+}

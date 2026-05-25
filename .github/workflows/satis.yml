@@ -1,0 +1,70 @@
+# .github/workflows/satis.yml
+#
+# GitHub Action : Build & Deploy du registry mt-registry
+#
+# Se déclenche :
+#   - Manuellement (workflow_dispatch)
+#   - Via webhook depuis n'importe quel package mt-* (repository_dispatch)
+#     → Chaque package envoie un event "satis-update" après un push sur main
+#   - À chaque modification de satis.json sur main
+#
+# Résultat :
+#   - Génère les fichiers du registry dans public/
+#   - Déploie sur GitHub Pages (https://martaf-labs.github.io/mt-registry)
+
+name: Build & Deploy Registry
+
+on:
+  # Déclenchement manuel depuis l'onglet Actions sur GitHub
+  workflow_dispatch:
+
+  # Déclenchement automatique via webhook depuis les packages mt-*
+  repository_dispatch:
+    types:
+      - satis-update
+
+  # Déclenchement automatique à chaque modification de satis.json
+  push:
+    branches:
+      - main
+    paths:
+      - satis.json
+
+jobs:
+  build:
+    name: Build mt-registry
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Récupérer le code du repo mt-registry
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Installer PHP
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      # 3. Installer Satis globalement
+      - name: Install Satis
+        run: composer global require composer/satis --no-interaction
+
+      # 4. Construire le registry
+      #    SATIS_GITHUB_TOKEN : token avec accès "repo" aux packages privés
+      - name: Build Registry
+        run: |
+          ~/.composer/vendor/bin/satis build satis.json public/ --no-interaction
+        env:
+          COMPOSER_AUTH: '{"github-oauth":{"github.com":"${{ secrets.SATIS_GITHUB_TOKEN }}"}}'
+
+      # 5. Déployer sur GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          # Conserve les archives zip entre les builds
+          keep_files: true
+          commit_message: "chore: rebuild mt-registry [${{ github.event_name }}]"
