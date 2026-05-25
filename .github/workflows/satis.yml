@@ -22,6 +22,10 @@ on:
     paths:
       - satis.json
 
+# Permissions explicites pour pouvoir écrire sur gh-pages
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build mt-registry
@@ -33,7 +37,6 @@ jobs:
         uses: actions/checkout@v4
 
       # 2. Corriger les permissions Git pour Docker
-      #    → Docker tourne en root, ce qui crée un conflit de propriété
       - name: Fix Git ownership for Docker
         run: |
           git config --global --add safe.directory /build
@@ -41,8 +44,6 @@ jobs:
 
       # 3. Construire le registry via l'image Docker officielle de Satis
       #    → --skip-errors : ignore les repos vides ou inaccessibles
-      #      et continue le build avec les packages disponibles
-      #    → --user : fait tourner Docker avec le même utilisateur que le runner
       - name: Build Registry
         run: |
           docker run --rm \
@@ -53,10 +54,12 @@ jobs:
             composer/satis build /build/satis.json /build/public --skip-errors
 
       # 4. Déployer sur GitHub Pages
+      #    → force_orphan : crée la branche gh-pages proprement si elle n'existe pas
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           keep_files: true
+          force_orphan: false
           commit_message: "chore: rebuild mt-registry [${{ github.event_name }}]"
