@@ -34,15 +34,15 @@ jobs:
 
       # 2. Corriger les permissions Git pour Docker
       #    → Docker tourne en root, ce qui crée un conflit de propriété
-      #    → On déclare le dossier comme safe avant le build
       - name: Fix Git ownership for Docker
         run: |
           git config --global --add safe.directory /build
           git config --global --add safe.directory $(pwd)
 
       # 3. Construire le registry via l'image Docker officielle de Satis
+      #    → --skip-errors : ignore les repos vides ou inaccessibles
+      #      et continue le build avec les packages disponibles
       #    → --user : fait tourner Docker avec le même utilisateur que le runner
-      #    → Évite les conflits de permissions entre Docker et GitHub Actions
       - name: Build Registry
         run: |
           docker run --rm \
@@ -50,7 +50,7 @@ jobs:
             -e COMPOSER_AUTH='{"github-oauth":{"github.com":"${{ secrets.SATIS_GITHUB_TOKEN }}"}}' \
             -e COMPOSER_HOME=/tmp/composer \
             -v $(pwd):/build \
-            composer/satis build /build/satis.json /build/public
+            composer/satis build /build/satis.json /build/public --skip-errors
 
       # 4. Déployer sur GitHub Pages
       - name: Deploy to GitHub Pages
