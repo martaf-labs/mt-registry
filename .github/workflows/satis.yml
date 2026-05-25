@@ -29,7 +29,7 @@ on:
       - main
     paths:
       - satis.json
-
+      
 jobs:
   build:
     name: Build mt-registry
