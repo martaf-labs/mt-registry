@@ -29,27 +29,33 @@ on:
       - main
     paths:
       - satis.json
-      
+
 jobs:
   build:
     name: Build mt-registry
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Récupérer le code du repo mt-registry
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Construire le registry via l'image Docker officielle de Satis
+      #    → Pas de problème de version PHP ou de stabilité Composer
+      #    → SATIS_GITHUB_TOKEN : token avec accès "repo" aux packages privés
       - name: Build Registry
         run: |
           docker run --rm \
             -e COMPOSER_AUTH='{"github-oauth":{"github.com":"${{ secrets.SATIS_GITHUB_TOKEN }}"}}' \
             -v $(pwd):/build \
             composer/satis build /build/satis.json /build/public
-        
+
+      # 3. Déployer sur GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          # Conserve les archives zip entre les builds
           keep_files: true
           commit_message: "chore: rebuild mt-registry [${{ github.event_name }}]"
