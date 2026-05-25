@@ -48,7 +48,5 @@
     "require-dev-dependencies": false,
 
     "output-html": true,
-    "output-dir": "public/",
-
-    "twig-template": null
+    "output-dir": "public/"
 }
