@@ -354,3 +354,5 @@ mt-registry/
 ## Licence
 
 Usage interne — [martaf-labs](https://github.com/martaf-labs)
+
+<!-- composer config --global repositories.martaf \ '{"type":"composer","url":"https://martaf-labs.github.io/mt-registry"}' -->
