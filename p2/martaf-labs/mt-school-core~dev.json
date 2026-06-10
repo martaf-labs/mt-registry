@@ -1,0 +1,61 @@
+{
+    "packages": {
+        "martaf-labs/mt-school-core": [
+            {
+                "name": "martaf-labs/mt-school-core",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-school-core.git",
+                    "reference": "c3692d6f0696be00a7ff5b23d3bf53c73f20add9"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-school-core/martaf-labs-mt-school-core-c3692d6f0696be00a7ff5b23d3bf53c73f20add9-zip-f66bb7.zip",
+                    "reference": "c3692d6f0696be00a7ff5b23d3bf53c73f20add9",
+                    "shasum": "757113840f1801258f99f81afd6c59cd48bbb5b2"
+                },
+                "require": {
+                    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+                    "illuminate/view": "^10.0 || ^11.0 || ^12.0",
+                    "mt/mt-views": "*",
+                    "php": "^8.1"
+                },
+                "time": "2026-06-09T01:56:55+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\SchoolCore\\MtSchoolCoreServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\SchoolCore\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Package PHP centralisant la logique métier pour les applications de gestion scolaire (maternelle au supérieur) : élèves, enseignants, classes, notes, bulletins, emplois du temps, paiements et plus.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-school-core/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-school-core/issues"
+                }
+            }
+        ]
+    }
+}

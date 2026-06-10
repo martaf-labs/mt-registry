@@ -1,0 +1,109 @@
+{
+    "packages": {
+        "martaf-labs/mt-views": [
+            {
+                "name": "martaf-labs/mt-views",
+                "version": "1.0.1",
+                "version_normalized": "1.0.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-views.git",
+                    "reference": "ed4779fc6187eb13db3485c0b3a8af144c3b8439"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-views/martaf-labs-mt-views-ed4779fc6187eb13db3485c0b3a8af144c3b8439-zip-5fed95.zip",
+                    "reference": "ed4779fc6187eb13db3485c0b3a8af144c3b8439",
+                    "shasum": "67882a78c17ac95d2cd71996818355a2883209b9"
+                },
+                "require": {
+                    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+                    "php": "^8.1"
+                },
+                "time": "2025-08-21T11:00:58+00:00",
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtViews\\MtViewsServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtViews\\": "src/"
+                    }
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Ensemble de vues Blade partagées pour les projets Laravel : layouts, composants, partials, et structures de base réutilisables.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-views/tree/v1.0.1",
+                    "issues": "https://github.com/martaf-labs/mt-views/issues"
+                }
+            },
+            {
+                "name": "martaf-labs/mt-views",
+                "version": "2.0.1",
+                "version_normalized": "2.0.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-views.git",
+                    "reference": "ee3501f1b837cfcbff51965999294b5bd1d8e294"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-views/martaf-labs-mt-views-ee3501f1b837cfcbff51965999294b5bd1d8e294-zip-ebf215.zip",
+                    "reference": "ee3501f1b837cfcbff51965999294b5bd1d8e294",
+                    "shasum": "88300dce1a771b420f1e46af2670891d3ac29992"
+                },
+                "require": {
+                    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+                    "illuminate/view": "^10.0 || ^11.0 || ^12.0",
+                    "livewire/livewire": "^3.0",
+                    "php": "^8.1"
+                },
+                "time": "2025-12-10T10:28:42+00:00",
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtViews\\MtViewsServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtViews\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Ensemble de vues Blade partagées pour les projets Laravel : layouts, composants, partials, et structures de base réutilisables.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-views/tree/v2.0.1",
+                    "issues": "https://github.com/martaf-labs/mt-views/issues"
+                }
+            }
+        ]
+    }
+}

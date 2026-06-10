@@ -1,0 +1,61 @@
+{
+    "packages": {
+        "martaf-labs/mt-views": [
+            {
+                "name": "martaf-labs/mt-views",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-views.git",
+                    "reference": "5d90801bbad9fe92433bcacc377b39b816a121d6"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-views/martaf-labs-mt-views-5d90801bbad9fe92433bcacc377b39b816a121d6-zip-8a8442.zip",
+                    "reference": "5d90801bbad9fe92433bcacc377b39b816a121d6",
+                    "shasum": "374bad210f4654b6c9c0b01603a2d62400cfd1a0"
+                },
+                "require": {
+                    "livewire/livewire": "^3.0",
+                    "martaf-labs/mt-auth": "dev-main",
+                    "martaf-labs/mt-foundation": "dev-main",
+                    "php": "^8.2"
+                },
+                "time": "2026-06-09T02:03:18+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtViews\\MtViewsServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtViews\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Composants Blade, layouts et interface utilisateur de l'écosystème martaf-labs.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-views/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-views/issues"
+                }
+            }
+        ]
+    }
+}
