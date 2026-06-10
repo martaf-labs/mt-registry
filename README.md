@@ -1,7 +1,7 @@
 # mt-registry
 
 > Registry Composer privé de l'écosystème **martaf-labs**.
-> Point d'entrée unique pour installer et gérer tous les packages `mt-*` dans vos projets Laravel 12+.
+> Point d'entrée unique pour installer et gérer tous les packages `mt-*` dans vos projets Laravel 13+.
 
 ---
 
@@ -81,8 +81,10 @@ Cochez la permission **`repo`** (accès en lecture aux repos privés), puis copi
 
 ### Étape 2 — Enregistrer le token dans Composer
 
+Remplacez `VOTRE_TOKEN_GITHUB` par le token généré à l'étape précédente :
+
 ```bash
-composer config --global github-oauth.github.com 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
+composer config --global github-oauth.github.com VOTRE_TOKEN_GITHUB
 ```
 
 Cela enregistre le token dans `~/.composer/auth.json`.
@@ -348,9 +350,3 @@ mt-registry/
     ├── packages.json
     └── dist/                               # Archives zip des packages
 ```
-
----
-
-## Licence
-
-Usage interne — [martaf-labs](https://github.com/martaf-labs)
