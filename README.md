@@ -354,4 +354,3 @@ mt-registry/
 ## Licence
 
 Usage interne — [martaf-labs](https://github.com/martaf-labs)
-
