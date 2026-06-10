@@ -1,16 +1,16 @@
 {
     "packages": [],
     "includes": {
-        "include/all$d71b7f424d12ce78deceea753cdda5b1f0ffe560.json": {
-            "sha1": "d71b7f424d12ce78deceea753cdda5b1f0ffe560"
+        "include/all$e43a79b81fc15719ecd0330a12df820aa5a70110.json": {
+            "sha1": "e43a79b81fc15719ecd0330a12df820aa5a70110"
         }
     },
     "metadata-url": "/mt-registry/p2/%package%.json",
     "available-packages": [
-        "laravel/laravel",
         "martaf-labs/mt-blog",
         "martaf-labs/mt-foundation",
         "martaf-labs/mt-school-core",
+        "martaf-labs/mt-skeleton",
         "martaf-labs/mt-views"
     ]
 }
