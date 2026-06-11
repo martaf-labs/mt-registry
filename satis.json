@@ -8,6 +8,10 @@
     "repositories": [
         {
             "type": "vcs",
+            "url": "https://github.com/martaf-labs/mt-skeleton-core"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/martaf-labs/mt-skeleton"
         },
         {
