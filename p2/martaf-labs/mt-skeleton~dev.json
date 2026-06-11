@@ -8,13 +8,13 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:martaf-labs/mt-skeleton.git",
-                    "reference": "6a10f5a7442eaf3dc7bee27689a116e2041931c8"
+                    "reference": "436ecec1244832ce1d7b2b6cdb1b2dbad37e748e"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-6a10f5a7442eaf3dc7bee27689a116e2041931c8-zip-f29127.zip",
-                    "reference": "6a10f5a7442eaf3dc7bee27689a116e2041931c8",
-                    "shasum": "a8fd70576af8244f9bbac415cb6e8e3312b2ec80"
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-436ecec1244832ce1d7b2b6cdb1b2dbad37e748e-zip-988bf3.zip",
+                    "reference": "436ecec1244832ce1d7b2b6cdb1b2dbad37e748e",
+                    "shasum": "53daac99236adacfda131e46a82e26e5f1525de6"
                 },
                 "require": {
                     "laravel/fortify": "^1.0",
@@ -33,7 +33,7 @@
                     "nunomaduro/collision": "^8.0",
                     "phpunit/phpunit": "^11.0"
                 },
-                "time": "2026-06-11T10:03:56+00:00",
+                "time": "2026-06-11T10:35:47+00:00",
                 "default-branch": true,
                 "type": "project",
                 "extra": {
@@ -69,7 +69,7 @@
                         "@php artisan key:generate --ansi",
                         "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
                         "@php artisan migrate --graceful --ansi",
-                        "@php -r \"echo '\\n\\033[0;32m✓ Projet créé !\\033[0m\\n\\033[1mLancez maintenant :\\033[0m\\n  cd ' . basename(getcwd()) . '\\n  php artisan mt:install\\n';\""
+                        "@php artisan mt:welcome"
                     ],
                     "dev": [
                         "Composer\\Config::disableProcessTimeout",
