@@ -8,13 +8,13 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:martaf-labs/mt-skeleton-core.git",
-                    "reference": "63ff0260c8e4612338fa346424cc3be2a54a4284"
+                    "reference": "8b1fd9620a03f629529ee5dc0332a6e9cf3548b6"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton-core/martaf-labs-mt-skeleton-core-63ff0260c8e4612338fa346424cc3be2a54a4284-zip-5a6c2f.zip",
-                    "reference": "63ff0260c8e4612338fa346424cc3be2a54a4284",
-                    "shasum": "46d207f1aad20ce7c50582b6d4354390df5dd577"
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton-core/martaf-labs-mt-skeleton-core-8b1fd9620a03f629529ee5dc0332a6e9cf3548b6-zip-5482a0.zip",
+                    "reference": "8b1fd9620a03f629529ee5dc0332a6e9cf3548b6",
+                    "shasum": "50c7fc4ace61eded0a706c165028aaca5789467f"
                 },
                 "require": {
                     "laravel/framework": "^13.0",
@@ -28,7 +28,7 @@
                     "nunomaduro/collision": "^8.0",
                     "phpunit/phpunit": "^11.0"
                 },
-                "time": "2026-06-11T08:26:29+00:00",
+                "time": "2026-06-11T08:31:59+00:00",
                 "default-branch": true,
                 "type": "library",
                 "extra": {
