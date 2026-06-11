@@ -1,0 +1,87 @@
+{
+    "packages": {
+        "martaf-labs/mt-skeleton-core": [
+            {
+                "name": "martaf-labs/mt-skeleton-core",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-skeleton-core.git",
+                    "reference": "f6f41c30b037cd4a88689997218338461958e85f"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton-core/martaf-labs-mt-skeleton-core-f6f41c30b037cd4a88689997218338461958e85f-zip-7c7b26.zip",
+                    "reference": "f6f41c30b037cd4a88689997218338461958e85f",
+                    "shasum": "abb3c1ac592a5601dcb94ed22de076dee65bc27c"
+                },
+                "require": {
+                    "laravel/framework": "^13.0",
+                    "martaf-labs/mt-foundation": "dev-main",
+                    "php": "^8.2"
+                },
+                "require-dev": {
+                    "fakerphp/faker": "^1.24",
+                    "laravel/pint": "^1.0",
+                    "mockery/mockery": "^1.6",
+                    "nunomaduro/collision": "^8.0",
+                    "phpunit/phpunit": "^11.0"
+                },
+                "time": "2026-06-11T03:55:56+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "MtSkeletonCore\\MtSkeletonCoreServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "MtSkeletonCore\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "lint": [
+                        "pint --parallel"
+                    ],
+                    "lint:check": [
+                        "pint --parallel --test"
+                    ],
+                    "test": [
+                        "@php vendor/bin/phpunit"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Noyau de l'écosystème martaf-labs. Fournit les commandes Artisan, installers et stubs utilisés par mt-skeleton.",
+                "keywords": [
+                    "ecosystem",
+                    "installer",
+                    "laravel",
+                    "martaf",
+                    "skeleton"
+                ],
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-skeleton-core/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-skeleton-core/issues"
+                }
+            }
+        ]
+    }
+}
