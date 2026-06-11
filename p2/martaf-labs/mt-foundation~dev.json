@@ -8,13 +8,13 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:martaf-labs/mt-foundation.git",
-                    "reference": "10b25a7d93abfa5d42c46b908e7cbaeb9dbb77fe"
+                    "reference": "f34dbc3c8714b0e83b5549eaadf6ed0b6e613ebe"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-foundation/martaf-labs-mt-foundation-10b25a7d93abfa5d42c46b908e7cbaeb9dbb77fe-zip-517cba.zip",
-                    "reference": "10b25a7d93abfa5d42c46b908e7cbaeb9dbb77fe",
-                    "shasum": "6153a4d1574818b883ed461546a040cd226d0f55"
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-foundation/martaf-labs-mt-foundation-f34dbc3c8714b0e83b5549eaadf6ed0b6e613ebe-zip-29f168.zip",
+                    "reference": "f34dbc3c8714b0e83b5549eaadf6ed0b6e613ebe",
+                    "shasum": "5d4f1f37548abeecf0f429e7c23dc52fcd051ad3"
                 },
                 "require": {
                     "illuminate/support": "^11.0 || ^12.0 || ^13.0",
@@ -22,7 +22,7 @@
                     "spatie/laravel-activitylog": "^4.10",
                     "spatie/laravel-translatable": "^6.11"
                 },
-                "time": "2026-06-09T02:02:00+00:00",
+                "time": "2026-06-11T00:30:51+00:00",
                 "default-branch": true,
                 "type": "library",
                 "extra": {

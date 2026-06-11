@@ -8,13 +8,13 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:martaf-labs/mt-skeleton.git",
-                    "reference": "6def8a71f8a9a97bb8fd144842073202aaa8e90a"
+                    "reference": "0a5f50d99e9324287a62bcac51061569dd37e5e8"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-6def8a71f8a9a97bb8fd144842073202aaa8e90a-zip-1e041a.zip",
-                    "reference": "6def8a71f8a9a97bb8fd144842073202aaa8e90a",
-                    "shasum": "cfe9b905ef953dc5bf6b21f8a867caa81f5c9673"
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-0a5f50d99e9324287a62bcac51061569dd37e5e8-zip-1ff822.zip",
+                    "reference": "0a5f50d99e9324287a62bcac51061569dd37e5e8",
+                    "shasum": "0bb701c269dc539217d253cb15b6b64e52c80903"
                 },
                 "require": {
                     "laravel/fortify": "^1.0",
@@ -31,10 +31,9 @@
                     "laravel/sail": "^1.0",
                     "mockery/mockery": "^1.6",
                     "nunomaduro/collision": "^8.0",
-                    "pestphp/pest": "^3.0",
-                    "pestphp/pest-plugin-laravel": "^3.0"
+                    "phpunit/phpunit": "^11.0"
                 },
-                "time": "2026-06-11T00:11:00+00:00",
+                "time": "2026-06-11T00:31:24+00:00",
                 "default-branch": true,
                 "type": "project",
                 "extra": {
