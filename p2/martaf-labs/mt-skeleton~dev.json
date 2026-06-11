@@ -8,34 +8,41 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:martaf-labs/mt-skeleton.git",
-                    "reference": "f72dcef9acdb12360226dfe2c92e959db888ece4"
+                    "reference": "6def8a71f8a9a97bb8fd144842073202aaa8e90a"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-f72dcef9acdb12360226dfe2c92e959db888ece4-zip-d22e21.zip",
-                    "reference": "f72dcef9acdb12360226dfe2c92e959db888ece4",
-                    "shasum": "650211907db9dde097c9fa21a4a2f687e44e9b12"
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-6def8a71f8a9a97bb8fd144842073202aaa8e90a-zip-1e041a.zip",
+                    "reference": "6def8a71f8a9a97bb8fd144842073202aaa8e90a",
+                    "shasum": "cfe9b905ef953dc5bf6b21f8a867caa81f5c9673"
                 },
                 "require": {
-                    "laravel/framework": "^13.8",
+                    "laravel/fortify": "^1.0",
+                    "laravel/framework": "^13.0",
                     "laravel/tinker": "^3.0",
-                    "php": "^8.3"
+                    "livewire/livewire": "^3.0",
+                    "martaf-labs/mt-foundation": "dev-main",
+                    "php": "^8.2"
                 },
                 "require-dev": {
-                    "fakerphp/faker": "^1.23",
-                    "laravel/pail": "^1.2.5",
-                    "laravel/pao": "^1.0.6",
-                    "laravel/pint": "^1.27",
+                    "fakerphp/faker": "^1.24",
+                    "laravel/pail": "^1.2",
+                    "laravel/pint": "^1.0",
+                    "laravel/sail": "^1.0",
                     "mockery/mockery": "^1.6",
-                    "nunomaduro/collision": "^8.6",
-                    "phpunit/phpunit": "^12.5.12"
+                    "nunomaduro/collision": "^8.0",
+                    "pestphp/pest": "^3.0",
+                    "pestphp/pest-plugin-laravel": "^3.0"
                 },
-                "time": "2026-06-10T04:51:19+00:00",
+                "time": "2026-06-11T00:11:00+00:00",
                 "default-branch": true,
                 "type": "project",
                 "extra": {
                     "laravel": {
-                        "dont-discover": []
+                        "dont-discover": [],
+                        "providers": [
+                            "MtSkeleton\\MtSkeletonServiceProvider"
+                        ]
                     }
                 },
                 "installation-source": "dist",
@@ -43,7 +50,8 @@
                     "psr-4": {
                         "App\\": "app/",
                         "Database\\Factories\\": "database/factories/",
-                        "Database\\Seeders\\": "database/seeders/"
+                        "Database\\Seeders\\": "database/seeders/",
+                        "MtSkeleton\\": "src/"
                     }
                 },
                 "autoload-dev": {
@@ -52,22 +60,6 @@
                     }
                 },
                 "scripts": {
-                    "setup": [
-                        "composer install",
-                        "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-                        "@php artisan key:generate",
-                        "@php artisan migrate --force",
-                        "npm install --ignore-scripts",
-                        "npm run build"
-                    ],
-                    "dev": [
-                        "Composer\\Config::disableProcessTimeout",
-                        "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1 --timeout=0\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
-                    ],
-                    "test": [
-                        "@php artisan config:clear --ansi @no_additional_args",
-                        "@php artisan test"
-                    ],
                     "post-autoload-dump": [
                         "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
                         "@php artisan package:discover --ansi"
@@ -81,19 +73,40 @@
                     "post-create-project-cmd": [
                         "@php artisan key:generate --ansi",
                         "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-                        "@php artisan migrate --graceful --ansi"
+                        "@php artisan migrate --graceful --ansi",
+                        "@php artisan mt:install"
                     ],
-                    "pre-package-uninstall": [
-                        "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+                    "dev": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"npm run dev\" --names=server,queue,vite --kill-others"
+                    ],
+                    "test": [
+                        "@php artisan config:clear --ansi",
+                        "@php artisan test"
+                    ],
+                    "lint": [
+                        "pint --parallel"
+                    ],
+                    "lint:check": [
+                        "pint --parallel --test"
                     ]
                 },
                 "license": [
                     "MIT"
                 ],
-                "description": "Skeleton officiel de l'écosystème martaf-labs.",
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Skeleton officiel de l'écosystème martaf-labs. Permet de créer rapidement une application Laravel avec les modules mt-* souhaités.",
                 "keywords": [
-                    "framework",
-                    "laravel"
+                    "ecosystem",
+                    "laravel",
+                    "martaf",
+                    "skeleton",
+                    "starter"
                 ],
                 "support": {
                     "source": "https://github.com/martaf-labs/mt-skeleton/tree/main",
