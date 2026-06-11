@@ -8,13 +8,13 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:martaf-labs/mt-skeleton.git",
-                    "reference": "64138961ba45bc844fbf1bd2de9312965b3340dd"
+                    "reference": "23b4aa6f96f69660741314a858635c9ade80a9bb"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-64138961ba45bc844fbf1bd2de9312965b3340dd-zip-f9d64a.zip",
-                    "reference": "64138961ba45bc844fbf1bd2de9312965b3340dd",
-                    "shasum": "0ef08ff55baab968792464c6991f42fa2f28f2cc"
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-23b4aa6f96f69660741314a858635c9ade80a9bb-zip-3c2fa0.zip",
+                    "reference": "23b4aa6f96f69660741314a858635c9ade80a9bb",
+                    "shasum": "a2c27ea354c16eebebe4e67896221135f6ae9eaf"
                 },
                 "require": {
                     "laravel/fortify": "^1.0",
@@ -22,6 +22,7 @@
                     "laravel/tinker": "^3.0",
                     "livewire/livewire": "^3.0",
                     "martaf-labs/mt-foundation": "dev-main",
+                    "martaf-labs/mt-skeleton-core": "dev-main",
                     "php": "^8.2"
                 },
                 "require-dev": {
@@ -33,15 +34,12 @@
                     "nunomaduro/collision": "^8.0",
                     "phpunit/phpunit": "^11.0"
                 },
-                "time": "2026-06-11T01:36:43+00:00",
+                "time": "2026-06-11T03:38:27+00:00",
                 "default-branch": true,
                 "type": "project",
                 "extra": {
                     "laravel": {
-                        "dont-discover": [],
-                        "providers": [
-                            "MtSkeleton\\MtSkeletonServiceProvider"
-                        ]
+                        "dont-discover": []
                     }
                 },
                 "installation-source": "dist",
@@ -49,8 +47,7 @@
                     "psr-4": {
                         "App\\": "app/",
                         "Database\\Factories\\": "database/factories/",
-                        "Database\\Seeders\\": "database/seeders/",
-                        "MtSkeleton\\": "src/"
+                        "Database\\Seeders\\": "database/seeders/"
                     }
                 },
                 "autoload-dev": {
