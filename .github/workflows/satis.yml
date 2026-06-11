@@ -26,7 +26,7 @@ on:
 permissions:
   contents: write
 
-# Force Node.js 24 pour toutes les actions du workflow (évite les problèmes de compatibilité avec les actions JavaScript)
+# Force Node.js 24 pour toutes les actions du workflow
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -40,22 +40,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Corriger les permissions Git pour Docker
-      - name: Fix Git ownership for Docker
-        run: |
-          git config --global --add safe.directory /build
-          git config --global --add safe.directory $(pwd)
+      # 2. Installer PHP
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
 
-      # 3. Construire le registry via l'image Docker officielle de Satis
+      # 3. Construire le registry via Satis
       #    → --skip-errors : ignore les repos vides ou inaccessibles
       - name: Build Registry
         run: |
-          docker run --rm \
-            --user $(id -u):$(id -g) \
-            -e COMPOSER_AUTH='{"github-oauth":{"github.com":"${{ secrets.SATIS_GITHUB_TOKEN }}"}}' \
-            -e COMPOSER_HOME=/tmp/composer \
-            -v $(pwd):/build \
-            composer/satis build /build/satis.json /build/public --skip-errors
+          composer global require composer/satis --no-interaction --quiet
+          ~/.composer/vendor/bin/satis build satis.json public --skip-errors
+        env:
+          COMPOSER_AUTH: '{"github-oauth":{"github.com":"${{ secrets.SATIS_GITHUB_TOKEN }}"}}'
+          COMPOSER_HOME: /tmp/composer
 
       # 4. Déployer sur GitHub Pages
       - name: Deploy to GitHub Pages
