@@ -51,8 +51,8 @@ jobs:
       #    → --skip-errors : ignore les repos vides ou inaccessibles
       - name: Build Registry
         run: |
-          composer global require composer/satis:^2.0 --no-interaction --quiet --ignore-platform-reqs
-          ~/.composer/vendor/bin/satis build satis.json public --skip-errors
+          composer global require composer/satis:dev-main --no-interaction --quiet --ignore-platform-reqs
+          /tmp/composer/vendor/bin/satis build satis.json public --skip-errors
         env:
           COMPOSER_AUTH: '{"github-oauth":{"github.com":"${{ secrets.SATIS_GITHUB_TOKEN }}"}}'
           COMPOSER_HOME: /tmp/composer
