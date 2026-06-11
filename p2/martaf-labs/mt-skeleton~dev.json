@@ -8,13 +8,13 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:martaf-labs/mt-skeleton.git",
-                    "reference": "436ecec1244832ce1d7b2b6cdb1b2dbad37e748e"
+                    "reference": "2a08505091ae6e9885e03a2529574d939ff49888"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-436ecec1244832ce1d7b2b6cdb1b2dbad37e748e-zip-988bf3.zip",
-                    "reference": "436ecec1244832ce1d7b2b6cdb1b2dbad37e748e",
-                    "shasum": "53daac99236adacfda131e46a82e26e5f1525de6"
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-2a08505091ae6e9885e03a2529574d939ff49888-zip-6200d8.zip",
+                    "reference": "2a08505091ae6e9885e03a2529574d939ff49888",
+                    "shasum": "7897dfce5c4c9044c83154c54790ccc05e67c5ba"
                 },
                 "require": {
                     "laravel/fortify": "^1.0",
@@ -33,7 +33,7 @@
                     "nunomaduro/collision": "^8.0",
                     "phpunit/phpunit": "^11.0"
                 },
-                "time": "2026-06-11T10:35:47+00:00",
+                "time": "2026-06-11T12:49:38+00:00",
                 "default-branch": true,
                 "type": "project",
                 "extra": {
@@ -69,7 +69,7 @@
                         "@php artisan key:generate --ansi",
                         "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
                         "@php artisan migrate --graceful --ansi",
-                        "@php artisan mt:welcome"
+                        "@php -r \"echo PHP_EOL . '========================================' . PHP_EOL . '  Projet cree avec succes !' . PHP_EOL . '========================================' . PHP_EOL . '  Lancez maintenant :' . PHP_EOL . '  php artisan mt:install' . PHP_EOL . PHP_EOL;\""
                     ],
                     "dev": [
                         "Composer\\Config::disableProcessTimeout",
