@@ -8,34 +8,35 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:martaf-labs/mt-school-core.git",
-                    "reference": "c3692d6f0696be00a7ff5b23d3bf53c73f20add9"
+                    "reference": "1b29bae4b1ec094d6efd545653ea5d4e154ca1cf"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-school-core/martaf-labs-mt-school-core-c3692d6f0696be00a7ff5b23d3bf53c73f20add9-zip-f66bb7.zip",
-                    "reference": "c3692d6f0696be00a7ff5b23d3bf53c73f20add9",
-                    "shasum": "757113840f1801258f99f81afd6c59cd48bbb5b2"
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-school-core/martaf-labs-mt-school-core-1b29bae4b1ec094d6efd545653ea5d4e154ca1cf-zip-f73c0b.zip",
+                    "reference": "1b29bae4b1ec094d6efd545653ea5d4e154ca1cf",
+                    "shasum": "3ae02b9d1b0dee405562684168aec5a3fb7baf52"
                 },
                 "require": {
-                    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
-                    "illuminate/view": "^10.0 || ^11.0 || ^12.0",
-                    "mt/mt-views": "*",
+                    "illuminate/support": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+                    "illuminate/view": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+                    "martaf-labs/mt-media": "*",
+                    "martaf-labs/mt-views": "*",
                     "php": "^8.1"
                 },
-                "time": "2026-06-09T01:56:55+00:00",
+                "time": "2026-07-19T04:54:37+00:00",
                 "default-branch": true,
                 "type": "library",
                 "extra": {
                     "laravel": {
                         "providers": [
-                            "Mt\\SchoolCore\\MtSchoolCoreServiceProvider"
+                            "Mt\\MtSchoolCore\\MtSchoolCoreServiceProvider"
                         ]
                     }
                 },
                 "installation-source": "dist",
                 "autoload": {
                     "psr-4": {
-                        "Mt\\SchoolCore\\": "src/"
+                        "Mt\\MtSchoolCore\\": "src/"
                     },
                     "files": [
                         "src/Helpers/helpers.php"

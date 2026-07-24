@@ -1,0 +1,61 @@
+{
+    "packages": {
+        "martaf-labs/mt-ui": [
+            {
+                "name": "martaf-labs/mt-ui",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-ui.git",
+                    "reference": "5f10477215397fcff157d8425cb7b77af49c9809"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-ui/martaf-labs-mt-ui-5f10477215397fcff157d8425cb7b77af49c9809-zip-524dc6.zip",
+                    "reference": "5f10477215397fcff157d8425cb7b77af49c9809",
+                    "shasum": "ae065cbe51f388dfeaeff89171c3c3e477e4a71e"
+                },
+                "require": {
+                    "livewire/livewire": "^3.0",
+                    "martaf-labs/mt-icons": "dev-main",
+                    "martaf-labs/mt-media": "*",
+                    "php": "^8.2"
+                },
+                "time": "2026-07-24T01:03:28+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtUi\\MtUiServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtUi\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Composants Blade, layouts et interface utilisateur de l'écosystème martaf-labs.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-ui/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-ui/issues"
+                }
+            }
+        ]
+    }
+}

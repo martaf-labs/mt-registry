@@ -8,20 +8,22 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:martaf-labs/mt-blog.git",
-                    "reference": "d9981f01ee893415d4e74a3f90a166f113aab039"
+                    "reference": "e313354daf307877bde4d14c53f11f7e783a55b2"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-blog/martaf-labs-mt-blog-d9981f01ee893415d4e74a3f90a166f113aab039-zip-5c95f9.zip",
-                    "reference": "d9981f01ee893415d4e74a3f90a166f113aab039",
-                    "shasum": "2a5fa0e08724dd3c8607cd35c548646a17f733dd"
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-blog/martaf-labs-mt-blog-e313354daf307877bde4d14c53f11f7e783a55b2-zip-d14c89.zip",
+                    "reference": "e313354daf307877bde4d14c53f11f7e783a55b2",
+                    "shasum": "e83967d73cf9cbf5f1653f02cbee80c0b8ecbc58"
                 },
                 "require": {
-                    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
-                    "illuminate/view": "^10.0 || ^11.0 || ^12.0",
-                    "php": "^8.1"
+                    "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+                    "illuminate/view": "^11.0 || ^12.0 || ^13.0",
+                    "martaf-labs/mt-foundation": "dev-main",
+                    "martaf-labs/mt-ui": "dev-main",
+                    "php": "^8.2"
                 },
-                "time": "2026-05-14T03:40:27+00:00",
+                "time": "2026-07-24T01:08:30+00:00",
                 "default-branch": true,
                 "type": "library",
                 "extra": {

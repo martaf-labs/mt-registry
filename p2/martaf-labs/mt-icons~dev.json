@@ -1,0 +1,87 @@
+{
+    "packages": {
+        "martaf-labs/mt-icons": [
+            {
+                "name": "martaf-labs/mt-icons",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-icons.git",
+                    "reference": "12b897d3d13f7784d8da937bde9669c458a52f7d"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-icons/martaf-labs-mt-icons-12b897d3d13f7784d8da937bde9669c458a52f7d-zip-8bcc4d.zip",
+                    "reference": "12b897d3d13f7784d8da937bde9669c458a52f7d",
+                    "shasum": "52d88e9d4d5ba823a2ac7b873a2757da6542d039"
+                },
+                "require": {
+                    "illuminate/routing": "^11.0 || ^12.0 || ^13.0",
+                    "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+                    "illuminate/view": "^11.0 || ^12.0 || ^13.0",
+                    "php": "^8.2"
+                },
+                "require-dev": {
+                    "livewire/livewire": "^3.0",
+                    "orchestra/testbench": "^8.0|^9.0",
+                    "phpunit/phpunit": "^10.0"
+                },
+                "suggest": {
+                    "livewire/livewire": "Required for <livewire:mt-icons::icon-picker> and the preview panel (^3.0)"
+                },
+                "time": "2026-07-24T01:09:32+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "MtIcons\\MtIconsServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "MtIcons\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "MtIcons\\Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "test": [
+                        "vendor/bin/phpunit"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Modern, flexible and fast custom icon package for Laravel — with Livewire support",
+                "keywords": [
+                    "blade",
+                    "components",
+                    "icons",
+                    "laravel",
+                    "livewire",
+                    "svg"
+                ],
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-icons/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-icons/issues"
+                }
+            }
+        ]
+    }
+}

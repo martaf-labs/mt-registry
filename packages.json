@@ -1,17 +1,18 @@
 {
     "packages": [],
     "includes": {
-        "include/all$c0a833de43112a5385f5eeb786d6971f7d2feb18.json": {
-            "sha1": "c0a833de43112a5385f5eeb786d6971f7d2feb18"
+        "include/all$51aadea100aa1f6b244eaf370b14961ab613e8e4.json": {
+            "sha1": "51aadea100aa1f6b244eaf370b14961ab613e8e4"
         }
     },
     "metadata-url": "/mt-registry/p2/%package%.json",
     "available-packages": [
         "martaf-labs/mt-blog",
         "martaf-labs/mt-foundation",
+        "martaf-labs/mt-icons",
         "martaf-labs/mt-school-core",
         "martaf-labs/mt-skeleton-core",
         "martaf-labs/mt-skeleton",
-        "martaf-labs/mt-views"
+        "martaf-labs/mt-ui"
     ]
 }

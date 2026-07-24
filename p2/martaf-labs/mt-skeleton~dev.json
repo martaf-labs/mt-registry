@@ -8,13 +8,13 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:martaf-labs/mt-skeleton.git",
-                    "reference": "2a08505091ae6e9885e03a2529574d939ff49888"
+                    "reference": "2c81ab3cde1f4ead7428ce16d8eb88c4dc6d73a0"
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-2a08505091ae6e9885e03a2529574d939ff49888-zip-6200d8.zip",
-                    "reference": "2a08505091ae6e9885e03a2529574d939ff49888",
-                    "shasum": "7897dfce5c4c9044c83154c54790ccc05e67c5ba"
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-2c81ab3cde1f4ead7428ce16d8eb88c4dc6d73a0-zip-99c902.zip",
+                    "reference": "2c81ab3cde1f4ead7428ce16d8eb88c4dc6d73a0",
+                    "shasum": "0074a24173af881d40966182e2c756e4e2c22cb9"
                 },
                 "require": {
                     "laravel/fortify": "^1.0",
@@ -33,7 +33,7 @@
                     "nunomaduro/collision": "^8.0",
                     "phpunit/phpunit": "^11.0"
                 },
-                "time": "2026-06-11T12:49:38+00:00",
+                "time": "2026-06-11T14:04:07+00:00",
                 "default-branch": true,
                 "type": "project",
                 "extra": {
@@ -68,8 +68,7 @@
                     "post-create-project-cmd": [
                         "@php artisan key:generate --ansi",
                         "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-                        "@php artisan migrate --graceful --ansi",
-                        "@php -r \"echo PHP_EOL . '========================================' . PHP_EOL . '  Projet cree avec succes !' . PHP_EOL . '========================================' . PHP_EOL . '  Lancez maintenant :' . PHP_EOL . '  php artisan mt:install' . PHP_EOL . PHP_EOL;\""
+                        "@php artisan migrate --graceful --ansi"
                     ],
                     "dev": [
                         "Composer\\Config::disableProcessTimeout",
