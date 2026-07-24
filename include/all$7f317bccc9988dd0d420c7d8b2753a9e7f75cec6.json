@@ -1,0 +1,612 @@
+{
+    "packages": {
+        "martaf-labs/mt-blog": {
+            "dev-main": {
+                "name": "martaf-labs/mt-blog",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-blog.git",
+                    "reference": "e313354daf307877bde4d14c53f11f7e783a55b2"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-blog/martaf-labs-mt-blog-e313354daf307877bde4d14c53f11f7e783a55b2-zip-d14c89.zip",
+                    "reference": "e313354daf307877bde4d14c53f11f7e783a55b2",
+                    "shasum": "e83967d73cf9cbf5f1653f02cbee80c0b8ecbc58"
+                },
+                "require": {
+                    "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+                    "illuminate/view": "^11.0 || ^12.0 || ^13.0",
+                    "martaf-labs/mt-foundation": "dev-main",
+                    "martaf-labs/mt-ui": "dev-main",
+                    "php": "^8.2"
+                },
+                "time": "2026-07-24T01:08:30+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\Blog\\MtBlogServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\Blog\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Package PHP centralisant la logique métier et les éléments réutilisables (modèles, traits, services, helpers, etc.) des projets de type blog afin de garantir une base de code commune et cohérente.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-blog/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-blog/issues"
+                }
+            }
+        },
+        "martaf-labs/mt-foundation": {
+            "dev-main": {
+                "name": "martaf-labs/mt-foundation",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-foundation.git",
+                    "reference": "e06d14627bfb803b484c5468dc03a0edc4fcfb15"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-foundation/martaf-labs-mt-foundation-e06d14627bfb803b484c5468dc03a0edc4fcfb15-zip-a00675.zip",
+                    "reference": "e06d14627bfb803b484c5468dc03a0edc4fcfb15",
+                    "shasum": "10945d6b7f2503e6f4e3070c4af162a43fecab02"
+                },
+                "require": {
+                    "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+                    "php": "^8.2",
+                    "spatie/laravel-activitylog": "^4.10",
+                    "spatie/laravel-translatable": "^6.11"
+                },
+                "time": "2026-07-24T01:08:47+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtFoundation\\MtFoundationServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtFoundation\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Socle commun de l'écosystème martaf-labs : models de base, traits, helpers, enums et migrations essentielles.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-foundation/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-foundation/issues"
+                }
+            }
+        },
+        "martaf-labs/mt-icons": {
+            "dev-main": {
+                "name": "martaf-labs/mt-icons",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-icons.git",
+                    "reference": "12b897d3d13f7784d8da937bde9669c458a52f7d"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-icons/martaf-labs-mt-icons-12b897d3d13f7784d8da937bde9669c458a52f7d-zip-8bcc4d.zip",
+                    "reference": "12b897d3d13f7784d8da937bde9669c458a52f7d",
+                    "shasum": "52d88e9d4d5ba823a2ac7b873a2757da6542d039"
+                },
+                "require": {
+                    "illuminate/routing": "^11.0 || ^12.0 || ^13.0",
+                    "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+                    "illuminate/view": "^11.0 || ^12.0 || ^13.0",
+                    "php": "^8.2"
+                },
+                "require-dev": {
+                    "livewire/livewire": "^3.0",
+                    "orchestra/testbench": "^8.0|^9.0",
+                    "phpunit/phpunit": "^10.0"
+                },
+                "suggest": {
+                    "livewire/livewire": "Required for <livewire:mt-icons::icon-picker> and the preview panel (^3.0)"
+                },
+                "time": "2026-07-24T01:09:32+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "MtIcons\\MtIconsServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "MtIcons\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "MtIcons\\Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "test": [
+                        "vendor/bin/phpunit"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Modern, flexible and fast custom icon package for Laravel — with Livewire support",
+                "keywords": [
+                    "blade",
+                    "components",
+                    "icons",
+                    "laravel",
+                    "livewire",
+                    "svg"
+                ],
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-icons/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-icons/issues"
+                }
+            }
+        },
+        "martaf-labs/mt-school-core": {
+            "dev-main": {
+                "name": "martaf-labs/mt-school-core",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-school-core.git",
+                    "reference": "7a7786b02b179a7eeb0bb61f7437113368be02d8"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-school-core/martaf-labs-mt-school-core-7a7786b02b179a7eeb0bb61f7437113368be02d8-zip-4bb4ac.zip",
+                    "reference": "7a7786b02b179a7eeb0bb61f7437113368be02d8",
+                    "shasum": "7c1ed277d4949a6eced343efe7f132d8ae65441d"
+                },
+                "require": {
+                    "illuminate/support": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+                    "illuminate/view": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+                    "martaf-labs/mt-media": "*",
+                    "martaf-labs/mt-ui": "*",
+                    "php": "^8.1"
+                },
+                "time": "2026-07-24T01:11:18+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtSchoolCore\\MtSchoolCoreServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtSchoolCore\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Package PHP centralisant la logique métier pour les applications de gestion scolaire (maternelle au supérieur) : élèves, enseignants, classes, notes, bulletins, emplois du temps, paiements et plus.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-school-core/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-school-core/issues"
+                }
+            }
+        },
+        "martaf-labs/mt-skeleton-core": {
+            "dev-main": {
+                "name": "martaf-labs/mt-skeleton-core",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-skeleton-core.git",
+                    "reference": "48bb411f1a2fa81c9f48599ab8f2a5a1182b79ab"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton-core/martaf-labs-mt-skeleton-core-48bb411f1a2fa81c9f48599ab8f2a5a1182b79ab-zip-564273.zip",
+                    "reference": "48bb411f1a2fa81c9f48599ab8f2a5a1182b79ab",
+                    "shasum": "6f06d8beedbaa8530ac7e5b8e7028bd496f97f7d"
+                },
+                "require": {
+                    "laravel/framework": "^13.0",
+                    "martaf-labs/mt-foundation": "dev-main",
+                    "martaf-labs/mt-ui": "dev-main",
+                    "php": "^8.2"
+                },
+                "require-dev": {
+                    "fakerphp/faker": "^1.24",
+                    "laravel/pint": "^1.0",
+                    "mockery/mockery": "^1.6",
+                    "nunomaduro/collision": "^8.0",
+                    "phpunit/phpunit": "^11.0"
+                },
+                "time": "2026-07-24T01:14:34+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "MtSkeletonCore\\MtSkeletonCoreServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "MtSkeletonCore\\": "src/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "lint": [
+                        "pint --parallel"
+                    ],
+                    "lint:check": [
+                        "pint --parallel --test"
+                    ],
+                    "test": [
+                        "@php vendor/bin/phpunit"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Noyau de l'écosystème martaf-labs. Fournit les commandes Artisan, installers et stubs utilisés par mt-skeleton.",
+                "keywords": [
+                    "ecosystem",
+                    "installer",
+                    "laravel",
+                    "martaf",
+                    "skeleton"
+                ],
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-skeleton-core/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-skeleton-core/issues"
+                }
+            }
+        },
+        "martaf-labs/mt-skeleton": {
+            "dev-main": {
+                "name": "martaf-labs/mt-skeleton",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-skeleton.git",
+                    "reference": "8c5787f00959fb9f06f048edc6663e5efeb99792"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-skeleton/martaf-labs-mt-skeleton-8c5787f00959fb9f06f048edc6663e5efeb99792-zip-479eb7.zip",
+                    "reference": "8c5787f00959fb9f06f048edc6663e5efeb99792",
+                    "shasum": "cf497ace530feeadb8cd0ef7155933913501454b"
+                },
+                "require": {
+                    "laravel/fortify": "^1.0",
+                    "laravel/framework": "^13.0",
+                    "laravel/tinker": "^3.0",
+                    "livewire/livewire": "^3.0",
+                    "martaf-labs/mt-skeleton-core": "dev-main",
+                    "php": "^8.2"
+                },
+                "require-dev": {
+                    "fakerphp/faker": "^1.24",
+                    "laravel/pail": "^1.2",
+                    "laravel/pint": "^1.0",
+                    "laravel/sail": "^1.0",
+                    "mockery/mockery": "^1.6",
+                    "nunomaduro/collision": "^8.0",
+                    "phpunit/phpunit": "^11.0"
+                },
+                "time": "2026-07-24T01:15:05+00:00",
+                "default-branch": true,
+                "type": "project",
+                "extra": {
+                    "laravel": {
+                        "dont-discover": []
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "App\\": "app/",
+                        "Database\\Factories\\": "database/factories/",
+                        "Database\\Seeders\\": "database/seeders/"
+                    }
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "Tests\\": "tests/"
+                    }
+                },
+                "scripts": {
+                    "post-autoload-dump": [
+                        "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+                        "@php artisan package:discover --ansi"
+                    ],
+                    "post-update-cmd": [
+                        "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+                    ],
+                    "post-root-package-install": [
+                        "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+                    ],
+                    "post-create-project-cmd": [
+                        "@php artisan key:generate --ansi",
+                        "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+                        "@php artisan migrate --graceful --ansi"
+                    ],
+                    "dev": [
+                        "Composer\\Config::disableProcessTimeout",
+                        "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"npm run dev\" --names=server,queue,vite --kill-others"
+                    ],
+                    "test": [
+                        "@php artisan config:clear --ansi",
+                        "@php artisan test"
+                    ],
+                    "lint": [
+                        "pint --parallel"
+                    ],
+                    "lint:check": [
+                        "pint --parallel --test"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Skeleton officiel de l'écosystème martaf-labs. Permet de créer rapidement une application Laravel avec les modules mt-* souhaités.",
+                "keywords": [
+                    "ecosystem",
+                    "laravel",
+                    "martaf",
+                    "skeleton",
+                    "starter"
+                ],
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-skeleton/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-skeleton/issues"
+                }
+            }
+        },
+        "martaf-labs/mt-ui": {
+            "1.0.1": {
+                "name": "martaf-labs/mt-ui",
+                "version": "1.0.1",
+                "version_normalized": "1.0.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-ui.git",
+                    "reference": "ed4779fc6187eb13db3485c0b3a8af144c3b8439"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-ui/martaf-labs-mt-ui-ed4779fc6187eb13db3485c0b3a8af144c3b8439-zip-5fed95.zip",
+                    "reference": "ed4779fc6187eb13db3485c0b3a8af144c3b8439",
+                    "shasum": "67882a78c17ac95d2cd71996818355a2883209b9"
+                },
+                "require": {
+                    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+                    "php": "^8.1"
+                },
+                "time": "2025-08-21T11:00:58+00:00",
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtViews\\MtViewsServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtViews\\": "src/"
+                    }
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Ensemble de vues Blade partagées pour les projets Laravel : layouts, composants, partials, et structures de base réutilisables.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-ui/tree/v1.0.1",
+                    "issues": "https://github.com/martaf-labs/mt-ui/issues"
+                }
+            },
+            "2.0.1": {
+                "name": "martaf-labs/mt-ui",
+                "version": "2.0.1",
+                "version_normalized": "2.0.1.0",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-ui.git",
+                    "reference": "ee3501f1b837cfcbff51965999294b5bd1d8e294"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-ui/martaf-labs-mt-ui-ee3501f1b837cfcbff51965999294b5bd1d8e294-zip-ebf215.zip",
+                    "reference": "ee3501f1b837cfcbff51965999294b5bd1d8e294",
+                    "shasum": "88300dce1a771b420f1e46af2670891d3ac29992"
+                },
+                "require": {
+                    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+                    "illuminate/view": "^10.0 || ^11.0 || ^12.0",
+                    "livewire/livewire": "^3.0",
+                    "php": "^8.1"
+                },
+                "time": "2025-12-10T10:28:42+00:00",
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtViews\\MtViewsServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtViews\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Ensemble de vues Blade partagées pour les projets Laravel : layouts, composants, partials, et structures de base réutilisables.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-ui/tree/v2.0.1",
+                    "issues": "https://github.com/martaf-labs/mt-ui/issues"
+                }
+            },
+            "dev-main": {
+                "name": "martaf-labs/mt-ui",
+                "version": "dev-main",
+                "version_normalized": "dev-main",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:martaf-labs/mt-ui.git",
+                    "reference": "5f10477215397fcff157d8425cb7b77af49c9809"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://martaf-labs.github.io/mt-registry/dist/martaf-labs/mt-ui/martaf-labs-mt-ui-5f10477215397fcff157d8425cb7b77af49c9809-zip-524dc6.zip",
+                    "reference": "5f10477215397fcff157d8425cb7b77af49c9809",
+                    "shasum": "ae065cbe51f388dfeaeff89171c3c3e477e4a71e"
+                },
+                "require": {
+                    "livewire/livewire": "^3.0",
+                    "martaf-labs/mt-icons": "dev-main",
+                    "martaf-labs/mt-media": "*",
+                    "php": "^8.2"
+                },
+                "time": "2026-07-24T01:03:28+00:00",
+                "default-branch": true,
+                "type": "library",
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Mt\\MtUi\\MtUiServiceProvider"
+                        ]
+                    }
+                },
+                "installation-source": "dist",
+                "autoload": {
+                    "psr-4": {
+                        "Mt\\MtUi\\": "src/"
+                    },
+                    "files": [
+                        "src/Helpers/helpers.php"
+                    ]
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Djoukeng Brice Marcello",
+                        "email": "djoukengbricemarcello@gmail.com"
+                    }
+                ],
+                "description": "Composants Blade, layouts et interface utilisateur de l'écosystème martaf-labs.",
+                "support": {
+                    "source": "https://github.com/martaf-labs/mt-ui/tree/main",
+                    "issues": "https://github.com/martaf-labs/mt-ui/issues"
+                }
+            }
+        }
+    }
+}
