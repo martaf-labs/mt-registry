@@ -30,7 +30,7 @@ mt-registry
 │
 ├── martaf-labs/mt-skeleton     → Skeleton de démarrage de projet
 ├── martaf-labs/mt-foundation   → Socle commun obligatoire
-├── martaf-labs/mt-views        → Composants Blade & layouts
+├── martaf-labs/mt-ui        → Composants Blade & layouts
 ├── martaf-labs/mt-icons        → Système d'icônes SVG
 ├── martaf-labs/mt-blog         → Module blog
 ├── martaf-labs/mt-school       → Module scolaire
@@ -47,7 +47,7 @@ mt-registry
 |---------|---------|-------------|
 | `martaf-labs/mt-skeleton` | `dev-main` | Skeleton de démarrage avec installateur interactif |
 | `martaf-labs/mt-foundation` | `dev-main` | Socle obligatoire : helpers, traits, config globale |
-| `martaf-labs/mt-views` | `dev-main` | Composants Blade réutilisables et layouts de base |
+| `martaf-labs/mt-ui` | `dev-main` | Composants Blade réutilisables et layouts de base |
 | `martaf-labs/mt-icons` | `dev-main` | Système d'icônes SVG intégré |
 | `martaf-labs/mt-blog` | `dev-main` | Blog complet : articles, catégories, tags, auteurs |
 | `martaf-labs/mt-school` | `dev-main` | Gestion scolaire : élèves, classes, notes, bulletins |
